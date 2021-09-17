@@ -1,4 +1,4 @@
-# record-and-play-pynput
+# Record and Play with Python!
 This allows you to record keyboard and mouse input, and play it back (with looping) using pynput. It allows for automation of any repetitive computer tasks.
 
 <h1>Usage</h1>
@@ -19,3 +19,9 @@ If you want to kill the play-back early, you can trigger a KeyboardInterrupt by 
 <h2>Compatablitity</h2>
 
 This is Mac compatiable – as I haven't been able to find others out there that are.
+
+<h2>Authors</h2>
+George Jensen
+
+<h2>Support!</h2>
+If you found this tool useful please give this repo a star!
