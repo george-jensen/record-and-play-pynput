@@ -2,7 +2,7 @@
 This allows you to record keyboard and mouse input, and play it back (with looping) using pynput. It allows for automation of any repetitive computer tasks.
 
 <h1>Installation</h1>
-- Clone/download this repo
+- Clone/download this repository
 - Open cmd/terminal and cd to the project
 - Execute pip install -r requirements.txt
 
