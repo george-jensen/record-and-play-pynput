@@ -15,7 +15,7 @@ if n > 2:
 if n == 2:
     name_of_recording = str(sys.argv[1])
 
-print("Scroll to end the recording")
+print("Scroll to end the recording for mouse, esc to end the recording for keyboard (both to finish recording)")
 storage = []
 count = 0
 
