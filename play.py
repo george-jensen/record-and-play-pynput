@@ -44,15 +44,22 @@ for loop in range(number_of_plays):
 
 
         else:
+            move_for_scroll = True
             x, y = obj['x'], obj['y']
+            if action == "scroll" and index > 0:
+                if x == data[index - 1]['x'] and y == data[index - 1]['y']:
+                    move_for_scroll = False
             print("x: {0}, y: {1}, action: {2}, time: {3}".format(x, y, action, _time))
-            mouse.position = (obj['x'], y)
-            if action == "pressed" or action == "released":
+            mouse.position = (x, y)
+            if action == "pressed" or action == "released" or action == "scroll" and move_for_scroll == True:
                 time.sleep(0.1)
             if action == "pressed":
                 mouse.press(Button.left if obj['button'] == "Button.left" else Button.right)
             elif action == "released":
                 mouse.release(Button.left if obj['button'] == "Button.left" else Button.right)
+            elif action == "scroll":
+                horizontal_direction, vertical_direction = obj['horizontal_direction'], obj['vertical_direction']
+                mouse.scroll(horizontal_direction, vertical_direction)
             time.sleep(pause_time)
     
 
