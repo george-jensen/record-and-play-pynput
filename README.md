@@ -20,7 +20,7 @@ If you want to kill the play-back early, you can trigger a KeyboardInterrupt by 
 
 - The data file takes in mouse movements every 50th of a second when holding down the left click on the mouse (dragging). If you aren't dragging a lot then you can run a relatively lengthy automation without creating a huge data file, however, if you're dragging a lot, keep the recording relatively short, as the data file will quickly fill up with mouse-movement JSON data.
 
-Scrolling functionality is suppported, however it is not completely precise, due to the carry through nature of scrolling on many applications. So it is recommended to drag scrollbars when available.
+Scrolling functionality is supported, however it is not completely precise, due to the carry through nature of scrolling on many applications. So it is recommended to drag scrollbars when available.
 
 <h2>Compatablitity</h2>
 
