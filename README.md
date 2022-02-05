@@ -24,10 +24,12 @@ Scrolling functionality is supported, however it is not completely precise, due 
 
 <h2>Compatablitity</h2>
 
-This is Mac compatiable – as I haven't been able to find others out there that are.
+This is both Windows and Mac compatible - I haven't been able to find a Mac compatible tool that does a similar job and that is one of the reasons for this repository's creation.
 
 <h2>Authors</h2>
 George Jensen
 
 <h2>Support!</h2>
 If you found this tool useful please give this repo a star!
+
+Please also feel free to create an issue to give feedback on any bugs, or ask for improvements! I'm always keen to keep things up to date and useful so any and all feedback is welcome!
