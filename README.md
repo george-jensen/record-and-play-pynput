@@ -1,4 +1,4 @@
-# Record and Play with Python!
+![Header](READMEHeader.png "Header")
 
 This allows you to record keyboard and mouse input, and play it back (with looping) using pynput. It allows for automation of any repetitive computer tasks.
 
