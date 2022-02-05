@@ -46,7 +46,7 @@ for loop in range(number_of_plays):
         else:
             move_for_scroll = True
             x, y = obj['x'], obj['y']
-            if action == "scroll" and index > 0:
+            if action == "scroll" and index > 0 and (data[index - 1]['action'] == "pressed" or data[index - 1]['action'] == "released"):
                 if x == data[index - 1]['x'] and y == data[index - 1]['y']:
                     move_for_scroll = False
             print("x: {0}, y: {1}, action: {2}, time: {3}".format(x, y, action, _time))
