@@ -4,17 +4,17 @@ This allows you to record keyboard and mouse input, and play it back (with loopi
 
 <h1>Installation</h1>
 
-- Clone or download this repository
-- Navigate to the repository in cmd or terminal
-- Run pip install -r requirements.txt
+- Clone or download this repository e.g. via `git clone https://github.com/george-jensen/record-and-play-pynput.git`
+- Navigate to the repository in cmd or terminal e.g. via `cd record-and-play-pynput`
+- Run `pip install -r requirements.txt`
 
 <h1>Usage</h1>
 
-- Simply run the 'record.py' file with Python3 using an input argument -> "name_of_recording" and a second optional argument 'record-all' (for more information on 'record-all' read the notes below). All keyboard and mouse activity after this command will be recorded.
+- Simply run the `record.py` file with Python3 using an input argument -> `name_of_recording` and a second optional argument `record-all` (for more information on `record-all` read the notes below). All keyboard and mouse activity after this command will be recorded.
 - To end the recording click the escape key (to end the Keyboard thread), and hold down the right click on the mouse for more than 2 seconds (without moving the mouse) - then release (to end the Mouse thread).
-- To play back the recording, run the 'play.py' file with Python3 using two input arguments -> 'name_of_recording' 'number_of_repeats'.
+- To play back the recording, run the `play.py` file with Python3 using two input arguments -> `name_of_recording number_of_repeats`. For example: `python3 my_recording.json 3`
 
-If you want to kill the play-back early, you can trigger a KeyboardInterrupt by clicking into the terminal window and pressing 'ctrl c' - although you'll have to do this while the automation is running.
+If you want to kill the play-back early, you can trigger a `KeyboardInterrupt` by clicking into the terminal window and pressing `Ctrl+C` - although you'll have to do this while the automation is running.
 
 <h2>Notes</h2>
 
