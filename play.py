@@ -7,14 +7,18 @@ import sys
 n = len(sys.argv)
 
 if n < 3:
-    exit("Takes two arguments - name of recording to play and number of times to play it")
+    exit("Takes three arguments - name of recording to play, number of times to play it, and speed multiplier (optional)")
 
-if n > 3:
-    exit("Only takes two argument - name of recording to play and number of times to play it")
+if n > 4:
+    exit("Only takes three arguments - name of recording to play, number of times to play it, and speed multiplier (optional)")
 
-if n == 3:
+# handle for number of arguments regardless of if speed multiplier is supplied
+if n in (3,4) :
     name_of_recording = "data/" + str(sys.argv[1]) +'.txt'
     number_of_plays = int(sys.argv[2])
+    speed_multiplier = 1 # default speed multiplier to 1 if no argument given
+    if n == 4:
+        speed_multiplier = int(sys.argv[3])
 
 with open(name_of_recording) as json_file:
     data = json.load(json_file)
@@ -29,10 +33,10 @@ for loop in range(number_of_plays):
         action, _time= obj['action'], obj['_time']
         try:
             next_movement = data[index+1]['_time']
-            pause_time = next_movement - _time
+            pause_time = (next_movement - _time) / speed_multiplier # divide each pause_time by speed multiplier to speed up execution
         except IndexError as e:
             pause_time = 1
-        
+
         if action == "pressed_key" or action == "released_key":
             key = obj['key'] if 'Key.' not in obj['key'] else special_keys[obj['key']]
             print("action: {0}, time: {1}, key: {2}".format(action, _time, str(key)))
@@ -61,6 +65,6 @@ for loop in range(number_of_plays):
                 horizontal_direction, vertical_direction = obj['horizontal_direction'], obj['vertical_direction']
                 mouse.scroll(horizontal_direction, vertical_direction)
             time.sleep(pause_time)
-    
+
 
 
