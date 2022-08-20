@@ -12,7 +12,8 @@ This allows you to record keyboard and mouse input, and play it back (with loopi
 
 - Simply run the 'record.py' file with Python3 using an input argument -> "name_of_recording" and a second optional argument 'record-all' (for more information on 'record-all' read the notes below). All keyboard and mouse activity after this command will be recorded.
 - To end the recording click the escape key (to end the Keyboard thread), and hold down the right click on the mouse for more than 2 seconds (without moving the mouse) - then release (to end the Mouse thread).
-- To play back the recording, run the 'play.py' file with Python3 using two input arguments -> 'name_of_recording' 'number_of_repeats'.
+- To play back the recording, run the 'play.py' file with Python3 using three input arguments -> 'name_of_recording' 'number_of_repeats' 'speed_multiplier'.
+- The 'speed_multiplier' argument of 'play.py' is optional, and if not input the file will default to a 'speed_multiplier' of 1.
 
 If you want to kill the play-back early, you can trigger a KeyboardInterrupt by clicking into the terminal window and pressing 'ctrl c' - although you'll have to do this while the automation is running.
 
