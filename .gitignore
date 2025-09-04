@@ -130,3 +130,22 @@ dmypy.json
 
 # Recording files
 .txt
+
+# Claude Code
+.claude/*
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# Testing and coverage (additional)
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
